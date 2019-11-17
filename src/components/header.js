@@ -27,6 +27,10 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <Link to='/tima' style={{
+            color: `white`,
+            textDecoration: `none`,
+          }}>Tima page</Link>
     </div>
   </header>
 )

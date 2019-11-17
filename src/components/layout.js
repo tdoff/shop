@@ -26,8 +26,6 @@ const Layout = ({ children }) => {
     }
   `)
 
-  console.log({dataQuery})
-
   const [data] = useJsonForm(dataQuery.dataJson, FormOptions);
 
   return (

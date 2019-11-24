@@ -1,8 +1,12 @@
+const dotenv = require("dotenv")
+
+dotenv.config()
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Магазин white cat`,
+    description: `посуда, ...`,
+    author: `@nurbek`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -28,22 +32,26 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-tinacms',
+      resolve: "gatsby-plugin-tinacms",
       options: {
-        plugins: [
-          "gatsby-tinacms-git",
-          'gatsby-tinacms-json',
-        ],
+        plugins: ["gatsby-tinacms-git", "gatsby-tinacms-json"],
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/data`,
-        name: 'data',
+        name: "data",
       },
     },
-    'gatsby-transformer-json',
+    "gatsby-transformer-json",
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTETFULL_SPACE_ID,
+        accessToken: process.env.CONTETFULL_ACCESS_TOKEN,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

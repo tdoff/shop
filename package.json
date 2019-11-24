@@ -12,6 +12,7 @@
     "gatsby-plugin-react-helmet": "^3.1.14",
     "gatsby-plugin-sharp": "^2.2.37",
     "gatsby-plugin-tinacms": "^0.1.13",
+    "gatsby-source-contentful": "^2.1.62",
     "gatsby-source-filesystem": "^2.1.37",
     "gatsby-tinacms-git": "^0.2.11",
     "gatsby-tinacms-json": "^0.6.4",

@@ -7,10 +7,12 @@ const Wrapper = styled.div``
 const ImageList = styled.ul`
   display: flex;
   overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 `
 const ImageItem = styled.li`
-  height: 200px;
   flex: 0 0 100%;
+  scroll-snap-align: center;
 `
 
 export const ProductCard = ({ product }) => {

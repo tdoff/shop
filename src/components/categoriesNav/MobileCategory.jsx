@@ -1,5 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
+import { Link } from "gatsby"
 import styled from "styled-components"
 
 const Item = styled.li`
@@ -24,8 +25,10 @@ const P = styled.p`
 export default function MobileCategory({ category }) {
   return (
     <Item>
-      <Img fixed={category.image.fixed} />
-      <P>{category.name}</P>
+      <Link to={`/category/${category.name}`}>
+        <Img fixed={category.image.fixed} />
+        <P>{category.name}</P>
+      </Link>
     </Item>
   )
 }

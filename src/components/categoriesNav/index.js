@@ -6,7 +6,7 @@ import MobileNav from "./MobileNav"
 export default function Categories() {
   const data = useStaticQuery(graphql`
     {
-      allContentfulCategory {
+      allContentfulCategory(sort: { fields: id }) {
         nodes {
           name
           image {

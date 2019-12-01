@@ -33,7 +33,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
           }
         }
-        allContentfulManufacturer {
+        allContentfulManufacturer(
+          filter: { product: { elemMatch: { id: { ne: null } } } }
+        ) {
           nodes {
             name
             product {

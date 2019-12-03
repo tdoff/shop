@@ -7,17 +7,15 @@ const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  background-color: #333;
   padding: 0.5px;
 `
 
 const LI = styled.li`
   background-color: #fff;
   flex: 0 0 50%;
-  flex-basis: calc(50% - 0.4px);
   height: 300px;
   padding: 0 8px;
-  margin: 0 0.2px;
+  border: 0.5px solid silver;
 `
 
 export default function Products({ products }) {

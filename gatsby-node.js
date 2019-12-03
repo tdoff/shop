@@ -64,6 +64,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 src
               }
             }
+            description {
+              json
+            }
           }
         }
       }

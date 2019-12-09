@@ -24,7 +24,7 @@ const P = styled.p`
 
 export default function MobileCategory({ category }) {
   return (
-    <Item>
+    <Item className="paper">
       <Link to={`/category/${category.name}`}>
         <Img fixed={category.image.fixed} />
         <P>{category.name}</P>

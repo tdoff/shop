@@ -14,7 +14,6 @@ const ShortDescription = styled.div`
 `
 
 export default function productDetails({ pageContext: product }) {
-  console.log({ product })
   return (
     <Layout>
       <SEO title={product.name} />

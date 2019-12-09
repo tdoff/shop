@@ -13,6 +13,7 @@ const List = styled.ul`
 const LI = styled.li`
   background-color: #fff;
   flex: 0 0 50%;
+  max-width: 50%;
   height: 300px;
   padding: 0 8px;
   border: 0.5px solid silver;

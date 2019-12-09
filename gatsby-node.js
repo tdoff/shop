@@ -43,6 +43,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               name
               pricePoint
               hasDiscount
+              discountPricePoint
               images {
                 title
                 fixed {

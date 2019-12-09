@@ -3,10 +3,11 @@ import MobileCategory from "./MobileCategory"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
-  padding: 8px;
+  padding: 6px;
 `
 
 const List = styled.ul`
+  padding: 2px 0;
   display: flex;
   overflow-x: auto;
 `

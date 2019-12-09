@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import ImageCarousel from "../ImageCarousel"
+import CurrencyLabel from "../CurrencyLabel"
 
 const Wrapper = styled(Link)`
   display: flex;
@@ -13,7 +14,7 @@ const Wrapper = styled(Link)`
 
 const ProductName = styled.p`
   opacity: 0.6;
-  padding-left: 8px;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 0;
@@ -23,12 +24,25 @@ const ProductName = styled.p`
   color: #282c3f;
 `
 
+const Price = styled.p`
+  font-weight: 600;
+  color: #282c3f;
+  font-size: 14px;
+  margin-top: 6px;
+  svg {
+    height: 13px;
+  }
+`
+
 export const ProductCard = ({ product }) => {
   return (
     <Wrapper to={`product/${product.name}`}>
       <ImageCarousel images={product.images} />
       <ProductName>{product.name}</ProductName>
-      <p>{product.pricePoint}</p>
+      <Price>
+        <CurrencyLabel />
+        <span>{product.pricePoint}</span>
+      </Price>
     </Wrapper>
   )
 }
